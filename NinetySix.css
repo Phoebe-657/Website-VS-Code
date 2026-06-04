@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* HEADER STYLING */
+.site-header {
+  background-color: #1F345C; /* Dark blue */
+  color: white;
+  padding: 6px 20px; /* reduced vertical padding */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 80px; /* smaller logo to slim header */
+  width: auto;
+  margin-right: 10px;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Special Elite', cursive;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-family: 'Special Elite', cursive;
+}
+
+.header-right a {
+  color: white;
+  margin-left: 15px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.header-nav a:hover,
+.header-right a:hover {
+  color: #ffcc00; /* Accent color */
+}
+
+.social-icon {
+  height: 24px;   /* adjust to desired size */
+  width: 24px;    /* keep square ratio */
+  margin-left: 12px; /* spacing between icons */
+  vertical-align: middle;
+}
