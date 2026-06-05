@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Special+Elite&display=swap');
 
 body {
-  margin: 0;
+  --bg-image: url('https://ninetysix-studios.com/wp-content/uploads/2026/06/About-Us-bg.png'); /* <-- CHANGE to swap background */
+  --bg-size: cover; /* <-- CHANGE: cover, contain, auto, or e.g. 50% */
+  --page-scroll: 200vh; /* <-- CHANGE for more/less scrollable space */
+  margin: 20px;
+  min-height: var(--page-scroll);
   background-color: #ffffff;
+  background-image: var(--bg-image);
+  background-size: var(--bg-size);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   color: #000;
   font-family: 'Poppins', sans-serif;
 }
 
 .about-main {
   --side-padding: 60px; /* <-- CHANGE for left/right page margins */
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 80px var(--side-padding);
 }
@@ -19,20 +28,20 @@ body {
   font-size: 34px;
   font-weight: 400;
   text-align: center;
-  margin: 0 0 60px 0;
+  margin: 0 0 6px 0;
   color: #000;
 }
 
 .about-content {
   display: flex;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
   justify-content: center;
 }
 
 .about-image {
-  flex: 0 0 40%;
-  max-width: 500px;
+  flex: 0 0 50%;
+  max-width: 650px;
 }
 
 .about-text {
@@ -48,7 +57,7 @@ body {
 }
 
 .about-text p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8;
   margin: 0 0 20px 0;
   color: #000;
@@ -64,27 +73,29 @@ body {
 }
 
 .about-text a {
-  color: #000;
-  text-decoration: underline;
+  color: #1F345C;
+  text-decoration: none;
 }
 
 .about-text a:hover {
   opacity: 0.7;
 }
 
-.community-section {
+.discord-button {
+  --discord-size: 80px; /* <-- CHANGE THIS to adjust button size */
   text-align: center;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
-.community-icon {
-  height: 48px;
+.discord-button img {
+  height: var(--discord-size);
   width: auto;
-  margin-bottom: 20px;
+  margin-right: 4%;
 }
 
-.community-text {
-  font-size: 16px;
+.discord-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
   color: #000;
-  margin: 0;
+  margin: 12px 0 0 0;
 }
