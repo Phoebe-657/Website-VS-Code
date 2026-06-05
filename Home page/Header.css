@@ -6,9 +6,10 @@
 
 /* HEADER STYLING */
 .site-header {
+  --side-padding: 60px; /* <-- CHANGE THIS to adjust edge margins */
   background-color: #1F345C; /* Dark blue */
   color: white;
-  padding: 6px 20px; /* reduced vertical padding */
+  padding: 6px var(--side-padding);
 }
 
 .header-container {
@@ -36,23 +37,42 @@
 }
 
 .header-nav ul {
+  --nav-gap: 80px; /* <-- CHANGE THIS to adjust spacing between page names */
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 0;
   margin: 0;
   padding: 0;
 }
 
+.header-nav li {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav li:not(:last-child)::after {
+  content: "|";
+  color: rgba(255,255,255,0.4);
+  margin: 0 calc(var(--nav-gap) / 2);
+}
+
 .header-nav a {
+  font-size: 16px;
   text-decoration: none;
   color: white;
   font-weight: 500;
   font-family: 'Special Elite', cursive;
 }
 
+.header-right {
+  --icon-gap: 4px; /* <-- CHANGE THIS to adjust icon spacing */
+  display: flex;
+  align-items: center;
+  gap: var(--icon-gap);
+}
+
 .header-right a {
   color: white;
-  margin-left: 40px;
   font-size: 18px;
   text-decoration: none;
 }
@@ -66,6 +86,5 @@
 .social-icon {
   height: 24px;   /* adjust to desired size */
   width: 24px;    /* keep square ratio */
-  margin-left: 6px; /* spacing between icons */
   vertical-align: middle;
 }
