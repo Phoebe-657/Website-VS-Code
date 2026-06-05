@@ -3,14 +3,11 @@
 /* === LINK CARDS LAYOUT === */
 
 .home-main {
-  --bg-image: url('https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-04_142335088.png'); /* <-- CHANGE to swap background */
-  background: var(--bg-image) center/auto no-repeat;
+  --bg-image: url('https://ninetysix-studios.com/wp-content/uploads/2026/06/Resized-bg-wo-header-1.png'); /* <-- CHANGE to swap background */
+  --page-scroll: 300vh; /* <-- CHANGE to adjust scroll distance */
+  background: var(--bg-image) center/80% auto no-repeat;
+  min-height: var(--page-scroll);
   padding: 60px 0;
-}
-
-.home-white-space {
-  height: 2000px;
-  background: white;
 }
 
 .cards-section {
@@ -20,14 +17,6 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--side-padding);
-}
-
-.cards-heading {
-  font-family: 'Special Elite', cursive;
-  font-size: 32px;
-  color: white;
-  margin-bottom: 40px;
-  text-align: center;
 }
 
 .cards-grid {
