@@ -1,110 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NinetySix Studios – Blog</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- ============================================ -->
+<!-- WORDPRESS BLOG PAGE — HEADER + QUERY + FOOTER -->
+<!-- ============================================ -->
 
-  <div class="blog-container">
+<!-- BLOCK 1: Custom HTML — Header (paste first) -->
 
-    <!-- Blog Post 1 -->
-    <div class="blog-post">
-      <div class="blog-image">
-        <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/Blog-Post-1.png" alt="Langit Lupa: Office Wars">
-      </div>
-      <div class="blog-content">
-        <p class="blog-date">August 26, 2025</p>
-        <a href="https://ninetysix-studios.com/2025/08/26/press-faqs/" class="blog-title">
-          <h3>Everything You've Been Wondering About Langit Lupa: Office Wars</h3>
-        </a>
-        <p class="blog-subtitle">
-          Additional Details – Genre: Online Multiplayer Party Game of Tag – Game: Play 9+ Filipino Childhood Games set in Office – Demo Game Modes: Langit Lupa, 21 (Bente-Uno), Ice-ice Water, Agawan Base, Labo-labo, Capture the Flag, Pass the Bomb, Lipat…
-        </p>
-        <a class="read-more" href="https://ninetysix-studios.com/2025/08/26/press-faqs/">Read more...</a>
-      </div>
+<!-- ⏬ CUSTOM HTML — HEADER ⏬ -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+.blog-custom-header {
+  background-color: #1F345C;
+  color: white;
+  padding: 6px 60px;
+  margin: 0 calc(-50vw + 50%);
+}
+
+.blog-custom-header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-custom-header .header-left {
+  display: flex;
+  align-items: center;
+}
+
+.blog-custom-header .logo {
+  height: 80px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.blog-custom-header .header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-custom-header .header-nav li {
+  display: flex;
+  align-items: center;
+}
+
+.blog-custom-header .header-nav li:not(:last-child)::after {
+  content: "|";
+  color: rgba(255,255,255,0.4);
+  margin: 0 40px;
+}
+
+.blog-custom-header .header-nav a {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-family: 'Special Elite', cursive;
+}
+
+.blog-custom-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.blog-custom-header .header-right a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.blog-custom-header .header-nav a:hover,
+.blog-custom-header .header-right a:hover {
+  color: #ffcc00;
+}
+
+.blog-custom-header .social-icon {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.blog-custom-header .header-right a:hover .social-icon {
+  transform: scale(1.25);
+  filter: brightness(1.3);
+}
+
+@media (max-width: 700px) {
+  .blog-custom-header {
+    padding: 6px 16px;
+  }
+  .blog-custom-header .header-container {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .blog-custom-header .header-nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .blog-custom-header .header-nav li:not(:last-child)::after {
+    margin: 0 12px;
+  }
+}
+</style>
+
+<header class="blog-custom-header">
+  <div class="header-container">
+    <div class="header-left">
+      <a href="/">
+        <img src="https://ninetysix-studios.com/wp-content/uploads/2026/05/image_2026-05-29_112335959.png" alt="Company Logo" class="logo">
+      </a>
     </div>
-
-    <!-- Blog Post 2 -->
-    <div class="blog-post">
-      <div class="blog-image">
-        <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/Blog-Post-2.png" alt="Pass the Bomb Mode">
-      </div>
-      <div class="blog-content">
-        <p class="blog-date">March 22, 2025</p>
-        <a href="https://ninetysix-studios.com/2025/03/22/upcoming-pass-the-bomb-mode-for-langit-lupa/" class="blog-title">
-          <h3>Upcoming "Pass the Bomb" Mode for Langit Lupa</h3>
-        </a>
-        <p class="blog-subtitle">
-          Hey everyone, I'm really excited to share that in the next build, coming out in about two weeks, I'll be rolling out a cool new game mode called "Pass the Bomb." I've been working hard on this…
-        </p>
-        <a class="read-more" href="https://ninetysix-studios.com/2025/03/22/upcoming-pass-the-bomb-mode-for-langit-lupa/">Read more...</a>
-      </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="https://ninetysix-studios.com/">Home</a></li>
+        <li><a href="https://ninetysix-studios.com/blog-posts/">Blogs</a></li>
+        <li><a href="#">Free</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <a href="https://facebook.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134341040.png" alt="Facebook" class="social-icon"></a>
+      <a href="https://instagram.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134442016.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://twitter.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134504848.png" alt="Twitter" class="social-icon"></a>
+      <a href="https://linkedin.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134654223.png" alt="LinkedIn" class="social-icon"></a>
+      <a href="https://tiktok.com/@yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134724016.png" alt="TikTok" class="social-icon"></a>
+      <a href="https://youtube.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134819559.png" alt="YouTube" class="social-icon"></a>
     </div>
-
-    <!-- Blog Post 3 -->
-    <div class="blog-post">
-      <div class="blog-image">
-        <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/Blog-Post-3.png" alt="Dev Diaries Grinding">
-      </div>
-      <div class="blog-content">
-        <p class="blog-date">March 22, 2025</p>
-        <a href="https://ninetysix-studios.com/2025/03/22/dev-diaries-grinding-langit-lupa/" class="blog-title">
-          <h3>Dev Diaries: Grinding Langit Lupa</h3>
-        </a>
-        <p class="blog-subtitle">
-          Working Through the Week It feels like I never get a break anymore. I haven't had time to scuba dive—a hobby I love— in over six months. I miss that "me time" when I could just relax…
-        </p>
-        <a class="read-more" href="https://ninetysix-studios.com/2025/03/22/dev-diaries-grinding-langit-lupa/">Read more...</a>
-      </div>
-    </div>
-
-    <!-- Blog Post 4 -->
-    <div class="blog-post">
-      <div class="blog-image">
-        <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/Blog-Post-4.png" alt="Dev Diaries Grinding">
-      </div>
-      <div class="blog-content">
-        <p class="blog-date">March 22, 2025</p>
-        <a href="https://ninetysix-studios.com/2025/02/03/cant-open-langit-lupa-on-mac/" class="blog-title">
-          <h3>Dev Diaries: Grinding Langit Lupa</h3>
-        </a>
-        <p class="blog-subtitle">
-          Working Through the Week It feels like I never get a break anymore. I haven't had time to scuba dive—a hobby I love— in over six months. I miss that "me time" when I could just relax…
-        </p>
-        <a class="read-more" href="https://ninetysix-studios.com/2025/02/03/cant-open-langit-lupa-on-mac/">Read more...</a>
-      </div>
-    </div>
-
-    <!-- Blog Post 5 -->
-    <div class="blog-post">
-      <div class="blog-image">
-        <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/Blog-Post-5.png" alt="Twenty-One Game Mode">
-      </div>
-      <div class="blog-content">
-        <p class="blog-date">March 3, 2025</p>
-        <a href="https://ninetysix-studios.com/2025/03/03/v0-1-4-twenty-one-game-mode/" class="blog-title">
-          <h3>v0.1.4 Twenty-One Game Mode!</h3>
-        </a>
-        <p class="blog-subtitle">
-          Question… Have you every played this type of game during your childhood? Here we called it TwentyOne, you usually count before the game starters and kung sino yung ika-21, siya yung taya. I heard it's also called…
-        </p>
-        <a class="read-more" href="https://ninetysix-studios.com/2025/03/03/v0-1-4-twenty-one-game-mode/">Read more...</a>
-      </div>
-    </div>
-
   </div>
+</header>
+<!-- ⏹ END HEADER ⏹ -->
 
-  <footer class="blog-custom-footer">
-    <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/blogpost-footer.png" alt="Footer">
-    <p>&copy; <span id="current-year"></span> NinetySix Studios. All rights reserved</p>
-  </footer>
+<!-- END BLOCK 1 -->
 
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
+<!-- ============================================ -->
 
-</body>
-</html>
+<!-- BLOCK 2: Paste this in the Code Editor (Query Loop) -->
+
+<!-- wp:query {"queryId":9,"query":{"perPage":20,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"taxQuery":{"include":{"category":[18841228,770389608]}}},"enhancedPagination":true,"align":"wide"} -->
+<div class="wp-block-query alignwide"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"default"}} -->
+<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|30"}}}} -->
+<div class="wp-block-columns"><!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%"><!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","scale":"contain"} /--></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"60%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:60%"><!-- wp:post-date {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"fontSize":"small"} /-->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
+<div class="wp-block-group"><!-- wp:post-title {"level":3,"isLink":true,"align":"full","className":"no-underline","style":{"typography":{"textAlign":"left"}},"fontSize":"large"} /-->
+
+<!-- wp:spacer {"height":"var:preset|spacing|10"} -->
+<div style="height:var(--wp--preset--spacing--10)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:post-excerpt {"moreText":"Read More....","excerptLength":37} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:spacer {"height":"var:preset|spacing|10"} -->
+<div style="height:var(--wp--preset--spacing--10)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+<!-- /wp:post-template -->
+
+<!-- wp:spacer {"height":"var:preset|spacing|10"} -->
+<div style="height:var(--wp--preset--spacing--10)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+<!-- wp:query-pagination-previous /-->
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination --></div>
+<!-- /wp:query -->
+
+<!-- END BLOCK 2 -->
+
+<!-- ============================================ -->
+
+<!-- BLOCK 3: Custom HTML — Footer -->
+
+<!-- ⏬ CUSTOM HTML — FOOTER ⏬ -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.blog-custom-footer {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-custom-footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-custom-footer p {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+@media (max-width: 700px) {
+  .blog-custom-footer {
+    min-height: 0;
+  }
+  .blog-custom-footer p {
+    bottom: 8px;
+    font-size: 0.8rem;
+  }
+}
+</style>
+
+<footer class="blog-custom-footer">
+  <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/blogpost-footer.png" alt="Footer">
+  <p>&copy; <span id="blog-year"></span> NinetySix Studios. All rights reserved</p>
+</footer>
+
+<script>
+document.getElementById('blog-year').textContent = new Date().getFullYear();
+</script>
+<!-- ⏹ END FOOTER ⏹ -->
+
+<!-- END BLOCK 3 -->

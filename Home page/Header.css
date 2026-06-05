@@ -87,4 +87,10 @@
   height: 24px;   /* adjust to desired size */
   width: 24px;    /* keep square ratio */
   vertical-align: middle;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.header-right a:hover .social-icon {
+  transform: scale(1.25);
+  filter: brightness(1.3);
 }
