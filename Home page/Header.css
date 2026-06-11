@@ -27,9 +27,17 @@
 }
 
 .logo {
-  height: 80px; /* smaller logo to slim header */
+  --logo-height: 65px;  /* <-- CHANGE to adjust logo size */
+  height: var(--logo-height);
   width: auto;
   margin-right: 10px;
+  transition: filter 0.3s ease;
+}
+
+.logo:hover {
+  filter:
+    drop-shadow(0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)))
+    drop-shadow(0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6)));
 }
 
 .company-name {
@@ -60,7 +68,8 @@
 }
 
 .header-nav a {
-  font-size: 16px;
+  --nav-font-size: 18px;  /* <-- CHANGE to adjust page name size */
+  font-size: var(--nav-font-size);
   text-decoration: none;
   color: white;
   font-weight: 500;
@@ -84,7 +93,6 @@
 
 /* Hover glow effects */
 .header-nav a:hover {
-  color: #ffcc00;
   text-shadow:
     0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)),
     0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6));
@@ -98,8 +106,8 @@
 }
 
 .social-icon {
-  height: 24px;   /* adjust to desired size */
-  width: 24px;    /* keep square ratio */
+  height: 26px;   /* adjust to desired size */
+  width: 26px;    /* keep square ratio */
   vertical-align: middle;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
