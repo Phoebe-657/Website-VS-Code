@@ -1,6 +1,79 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .home-main {
-  --bg-image: url('https://ninetysix-studios.com/wp-content/uploads/2026/06/Resized-bg-wo-header-1.png'); /* <-- CHANGE to swap background */
-  --page-scroll: 500vh; /* <-- CHANGE to adjust scroll distance */
-  background: var(--bg-image) center/100% auto no-repeat;
-  min-height: var(--page-scroll);
+  position: relative;
+}
+
+.home-bg {
+  width: 100%;
+  display: block;
+}
+
+.langit-lupa-img {
+  --ll-top: 192px;       /* <-- CHANGE to adjust vertical position */
+  --ll-right: 470px;     /* <-- CHANGE to adjust horizontal position */
+  --ll-width: 250px;     /* <-- CHANGE to adjust size (height auto-scales) */
+  --glow-spread: 20px;   /* <-- CHANGE glow size */
+  --glow-blur: 12px;      /* <-- CHANGE glow softness */
+  --glow-opacity: 1;   /* <-- CHANGE glow intensity */
+  position: absolute;
+  top: var(--ll-top);
+  right: var(--ll-right);
+  width: var(--ll-width);
+  height: auto;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.langit-lupa-img:hover {
+  filter:
+    drop-shadow(0 0 var(--glow-blur) rgba(3,140,195,var(--glow-opacity)))
+    drop-shadow(0 0 var(--glow-spread) rgba(3,140,195,calc(var(--glow-opacity) * 0.5)));
+}
+
+.about-us-img {
+  --au-top: 145px;       /* <-- CHANGE to adjust vertical position */
+  --au-right: 120px;     /* <-- CHANGE to adjust horizontal position */
+  --au-width: 255px;     /* <-- CHANGE to adjust size (height auto-scales) */
+  --glow-spread: 20px;   /* <-- CHANGE glow size */
+  --glow-blur: 12px;      /* <-- CHANGE glow softness */
+  --glow-opacity: 1;   /* <-- CHANGE glow intensity */
+  position: absolute;
+  top: var(--au-top);
+  right: var(--au-right);
+  width: var(--au-width);
+  height: auto;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.about-us-img:hover {
+  filter:
+    drop-shadow(0 0 var(--glow-blur) rgba(158,209,60,var(--glow-opacity)))
+    drop-shadow(0 0 var(--glow-spread) rgba(158,209,60,calc(var(--glow-opacity) * 0.5)));
+}
+
+.blogs-img {
+  --bl-top: 445px;       /* <-- CHANGE to adjust vertical position */
+  --bl-right: 110px;     /* <-- CHANGE to adjust horizontal position */
+  --bl-width: 320px;     /* <-- CHANGE to adjust size (height auto-scales) */
+  --glow-spread: 20px;   /* <-- CHANGE glow size */
+  --glow-blur: 12px;      /* <-- CHANGE glow softness */
+  --glow-opacity: 1;   /* <-- CHANGE glow intensity */
+  position: absolute;
+  top: var(--bl-top);
+  right: var(--bl-right);
+  width: var(--bl-width);
+  height: auto;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.blogs-img:hover {
+  filter:
+    drop-shadow(0 0 var(--glow-blur) rgba(158,209,60,var(--glow-opacity)))
+    drop-shadow(0 0 var(--glow-spread) rgba(158,209,60,calc(var(--glow-opacity) * 0.5)));
 }
