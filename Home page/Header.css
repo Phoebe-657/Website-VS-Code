@@ -7,6 +7,9 @@
 /* HEADER STYLING */
 .site-header {
   --side-padding: 60px; /* <-- CHANGE THIS to adjust edge margins */
+  --glow-spread: 15px;  /* <-- CHANGE glow size */
+  --glow-blur: 5px;     /* <-- CHANGE glow softness */
+  --glow-opacity: 0.8;  /* <-- CHANGE glow intensity */
   background-color: #1F345C; /* Dark blue */
   color: white;
   padding: 6px var(--side-padding);
@@ -62,6 +65,7 @@
   color: white;
   font-weight: 500;
   font-family: 'Special Elite', cursive;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .header-right {
@@ -75,12 +79,22 @@
   color: white;
   font-size: 18px;
   text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
-/* Hover effect */
-.header-nav a:hover,
-.header-right a:hover {
-  color: #ffcc00; /* Accent color */
+/* Hover glow effects */
+.header-nav a:hover {
+  color: #ffcc00;
+  text-shadow:
+    0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)),
+    0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6));
+}
+
+.header-right a:hover .social-icon {
+  transform: scale(1.25);
+  filter:
+    drop-shadow(0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)))
+    drop-shadow(0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6)));
 }
 
 .social-icon {
@@ -88,9 +102,4 @@
   width: 24px;    /* keep square ratio */
   vertical-align: middle;
   transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.header-right a:hover .social-icon {
-  transform: scale(1.25);
-  filter: brightness(1.3);
 }
