@@ -147,7 +147,7 @@ html, body {
 
 .section-3-title1 {
   --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
-  --s3t-left: 140px;    /* <-- CHANGE to adjust horizontal position */
+  --s3t-left: 135px;    /* <-- CHANGE to adjust horizontal position */
   --s3t-width: 300px;    /* <-- CHANGE to adjust width */
   --s3t-height: auto;   /* <-- CHANGE to adjust height */
   position: absolute;
@@ -157,7 +157,7 @@ html, body {
 
 .section-3-title2 {
   --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
-  --s3t-left: 590px;    /* <-- CHANGE to adjust horizontal position */
+  --s3t-left: 605px;    /* <-- CHANGE to adjust horizontal position */
   --s3t-width: 270px;    /* <-- CHANGE to adjust width */
   --s3t-height: auto;   /* <-- CHANGE to adjust height */
   position: absolute;
@@ -168,7 +168,7 @@ html, body {
 .section-3-title3 {
   --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
   --s3t-left: 1025px;   /* <-- CHANGE to adjust horizontal position */
-  --s3t-width: 210px;    /* <-- CHANGE to adjust width */
+  --s3t-width: 270px;    /* <-- CHANGE to adjust width */
   --s3t-height: auto;   /* <-- CHANGE to adjust height */
   position: absolute;
   top: var(--s3t-top);
@@ -181,6 +181,45 @@ html, body {
   width: var(--s3t-width);
   height: var(--s3t-height);
   display: block;
+}
+
+.section-3-date1 {
+  --s3d-top: 1970px;    /* <-- CHANGE to adjust vertical position */
+  --s3d-left: 140px;    /* <-- CHANGE to adjust horizontal position */
+  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--s3d-top);
+  left: var(--s3d-left);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--s3d-size);
+  color: #000;
+  margin: 0;
+}
+
+.section-3-date2 {
+  --s3d-top: 1940px;    /* <-- CHANGE to adjust vertical position */
+  --s3d-left: 610px;    /* <-- CHANGE to adjust horizontal position */
+  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--s3d-top);
+  left: var(--s3d-left);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--s3d-size);
+  color: #000;
+  margin: 0;
+}
+
+.section-3-date3 {
+  --s3d-top: 1940px;    /* <-- CHANGE to adjust vertical position */
+  --s3d-left: 1030px;   /* <-- CHANGE to adjust horizontal position */
+  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--s3d-top);
+  left: var(--s3d-left);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--s3d-size);
+  color: #000;
+  margin: 0;
 }
 
 .meet-team-title {
@@ -248,6 +287,21 @@ html, body {
 
 .section1-btn {
   width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-3-btn {
+  --s3b-top: 2020px;    /* <-- CHANGE to adjust vertical position */
+  --s3b-left: 1160px;   /* <-- CHANGE to adjust horizontal position */
+  --s3b-width: 170px;    /* <-- CHANGE to adjust width */
+  position: absolute;
+  top: var(--s3b-top);
+  left: var(--s3b-left);
+}
+
+.section-3-btn img {
+  width: var(--s3b-width);
   height: auto;
   display: block;
 }
