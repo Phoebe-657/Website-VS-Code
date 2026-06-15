@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -76,4 +78,176 @@ html, body {
   filter:
     drop-shadow(0 0 var(--glow-blur) rgba(158,209,60,var(--glow-opacity)))
     drop-shadow(0 0 var(--glow-spread) rgba(158,209,60,calc(var(--glow-opacity) * 0.5)));
+}
+
+.about-us-2-img {
+  --sa-top: 750px;       /* <-- CHANGE to adjust vertical position */
+  --sa-right: 640px;
+  --sa-width: 480px;     /* <-- CHANGE to adjust size (height auto-scales) */
+  position: absolute;
+  top: var(--sa-top);
+  right: var(--sa-right);
+  width: var(--sa-width);
+  height: auto;
+}
+
+.section-2-link {
+  --s2-top: 1140px;    /* <-- CHANGE to adjust vertical position */
+  --s2-left: 470px;    /* <-- CHANGE to adjust horizontal position */
+  --s2-width: 160px;   /* <-- CHANGE to adjust size */
+  position: absolute;
+  top: var(--s2-top);
+  left: var(--s2-left);
+  width: var(--s2-width);
+}
+
+.section-2-btn {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-3-img1 {
+  --s3-top: 1690px;     /* <-- CHANGE to adjust vertical position */
+  --s3-left: 135px;     /* <-- CHANGE to adjust horizontal position */
+  --s3-height: 170px;   /* <-- CHANGE to adjust height */
+  --s3-width: auto;     /* <-- CHANGE to adjust width */
+  position: absolute;
+  top: var(--s3-top);
+  left: var(--s3-left);
+}
+
+.section-3-img2 {
+  --s3-top: 1690px;     /* <-- CHANGE to adjust vertical position */
+  --s3-left: 610px;     /* <-- CHANGE to adjust horizontal position */
+  --s3-height: 170px;   /* <-- CHANGE to adjust height */
+  --s3-width: auto;     /* <-- CHANGE to adjust width */
+  position: absolute;
+  top: var(--s3-top);
+  left: var(--s3-left);
+}
+
+.section-3-img3 {
+  --s3-top: 1690px;     /* <-- CHANGE to adjust vertical position */
+  --s3-left: 1025px;    /* <-- CHANGE to adjust horizontal position */
+  --s3-height: 170px;   /* <-- CHANGE to adjust height */
+  --s3-width: auto;     /* <-- CHANGE to adjust width */
+  position: absolute;
+  top: var(--s3-top);
+  left: var(--s3-left);
+}
+
+.section-3-img1 img,
+.section-3-img2 img,
+.section-3-img3 img {
+  height: var(--s3-height);
+  width: var(--s3-width);
+  display: block;
+}
+
+.section-3-title1 {
+  --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
+  --s3t-left: 140px;    /* <-- CHANGE to adjust horizontal position */
+  --s3t-width: 300px;    /* <-- CHANGE to adjust width */
+  --s3t-height: auto;   /* <-- CHANGE to adjust height */
+  position: absolute;
+  top: var(--s3t-top);
+  left: var(--s3t-left);
+}
+
+.section-3-title2 {
+  --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
+  --s3t-left: 590px;    /* <-- CHANGE to adjust horizontal position */
+  --s3t-width: 270px;    /* <-- CHANGE to adjust width */
+  --s3t-height: auto;   /* <-- CHANGE to adjust height */
+  position: absolute;
+  top: var(--s3t-top);
+  left: var(--s3t-left);
+}
+
+.section-3-title3 {
+  --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
+  --s3t-left: 1025px;   /* <-- CHANGE to adjust horizontal position */
+  --s3t-width: 210px;    /* <-- CHANGE to adjust width */
+  --s3t-height: auto;   /* <-- CHANGE to adjust height */
+  position: absolute;
+  top: var(--s3t-top);
+  left: var(--s3t-left);
+}
+
+.section-3-title1 img,
+.section-3-title2 img,
+.section-3-title3 img {
+  width: var(--s3t-width);
+  height: var(--s3t-height);
+  display: block;
+}
+
+.meet-team-title {
+  --mt-top: 795px;       /* <-- CHANGE to adjust vertical position */
+  --mt-right: 270px;     /* <-- CHANGE to adjust horizontal position */
+  --mt-size: 38px;       /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--mt-top);
+  right: var(--mt-right);
+  font-family: 'Special Elite', cursive;
+  font-size: var(--mt-size);
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.meet-team-txt1 {
+  --mtx-top: 870px;       /* <-- CHANGE to adjust vertical position */
+  --mtx-left: 850px;      /* <-- CHANGE to adjust horizontal position */
+  --mtx-width: 440px;     /* <-- CHANGE to adjust text box width */
+  --mtx-height: auto;     /* <-- CHANGE to adjust text box height */
+  --mtx-size: 20px;       /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--mtx-top);
+  left: var(--mtx-left);
+  width: var(--mtx-width);
+  height: var(--mtx-height);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--mtx-size);
+  color: #000;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.meet-team-txt2 {
+  --mtx2-top: 1260px;     /* <-- CHANGE to adjust vertical position */
+  --mtx2-left: 240px;     /* <-- CHANGE to adjust horizontal position */
+  --mtx2-width: 1020px;    /* <-- CHANGE to adjust text box width */
+  --mtx2-height: auto;    /* <-- CHANGE to adjust text box height */
+  --mtx2-size: 20px;      /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--mtx2-top);
+  left: var(--mtx2-left);
+  width: var(--mtx2-width);
+  height: var(--mtx2-height);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--mtx2-size);
+  color: #000;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.section1-link {
+  --s1-top: 460px;    /* <-- CHANGE to adjust vertical position */
+  --s1-left: 200px;   /* <-- CHANGE to adjust horizontal position */
+  --s1-width: 200px;  /* <-- CHANGE to adjust size */
+  position: absolute;
+  top: var(--s1-top);
+  left: var(--s1-left);
+  width: var(--s1-width);
+}
+
+.section1-btn {
+  width: 100%;
+  height: auto;
+  display: block;
 }

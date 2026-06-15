@@ -68,7 +68,10 @@
 }
 
 .header-nav a {
-  --nav-font-size: 18px;  /* <-- CHANGE to adjust page name size */
+  --nav-font-size: 18px;     /* <-- CHANGE to adjust page name size */
+  --nav-glow-spread: 15px;   /* <-- CHANGE glow size */
+  --nav-glow-blur: 5px;      /* <-- CHANGE glow softness */
+  --nav-glow-opacity: 0.8;   /* <-- CHANGE glow intensity */
   font-size: var(--nav-font-size);
   text-decoration: none;
   color: white;
@@ -94,8 +97,10 @@
 /* Hover glow effects */
 .header-nav a:hover {
   text-shadow:
-    0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)),
-    0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6));
+    0 0 var(--nav-glow-blur) rgba(255,255,255,var(--nav-glow-opacity)),
+    0 0 var(--nav-glow-spread) rgba(255,255,255,calc(var(--nav-glow-opacity) * 0.6));
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .header-right a:hover .social-icon {
