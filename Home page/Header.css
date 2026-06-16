@@ -1,7 +1,3 @@
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 /* HEADER STYLING */
@@ -112,8 +108,8 @@
 }
 
 .social-icon {
-  height: 26px;   /* adjust to desired size */
-  width: 26px;    /* keep square ratio */
+  height: 26px;
+  width: 26px;
   vertical-align: middle;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
