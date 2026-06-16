@@ -6,13 +6,14 @@
 
 /* HEADER STYLING */
 .site-header {
-  --side-padding: 60px; /* <-- CHANGE THIS to adjust edge margins */
-  --glow-spread: 15px;  /* <-- CHANGE glow size */
-  --glow-blur: 5px;     /* <-- CHANGE glow softness */
-  --glow-opacity: 0.8;  /* <-- CHANGE glow intensity */
+  --side-padding: 60px;  /* <-- CHANGE THIS to adjust edge margins */
+  --header-height: 6px;  /* <-- CHANGE THIS to adjust header height */
+  --glow-spread: 15px;   /* <-- CHANGE glow size */
+  --glow-blur: 5px;      /* <-- CHANGE glow softness */
+  --glow-opacity: 0.8;   /* <-- CHANGE glow intensity */
   background-color: #1F345C; /* Dark blue */
   color: white;
-  padding: 6px var(--side-padding);
+  padding: var(--header-height) var(--side-padding);
 }
 
 .header-container {
