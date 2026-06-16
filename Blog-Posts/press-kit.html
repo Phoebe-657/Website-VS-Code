@@ -13,33 +13,43 @@
   background: url('https://ninetysix-studios.com/wp-content/uploads/2026/06/press-kit-page-background.png') center/cover no-repeat fixed !important;
 }
 
-/* ── Kill top gap ── */
+/* ── Kill all margins/padding (every possible element) ── */
 .page-id-1664,
-.page-id-1664 body {
+.page-id-1664 body,
+.page-id-1664 html {
   padding: 0 !important;
   margin: 0 !important;
+  overflow-x: hidden !important;
 }
+
 .page-id-1664 .wp-site-blocks,
+.page-id-1664 .wp-site-blocks > *,
 .page-id-1664 .entry-content,
 .page-id-1664 .wp-block-post-content,
+.page-id-1664 .wp-block-post-content > *,
 .page-id-1664 article,
 .page-id-1664 .has-global-padding,
 .page-id-1664 #page,
 .page-id-1664 #content,
-.page-id-1664 .site {
+.page-id-1664 #primary,
+.page-id-1664 .site,
+.page-id-1664 .site-content,
+.page-id-1664 main,
+.page-id-1664 .is-layout-constrained,
+.page-id-1664 .is-layout-flow,
+.page-id-1664 .wp-block-group {
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   margin-block-start: 0 !important;
-}
-
-/* ── Strip theme wrappers ── */
-.page-id-1664 .wp-site-blocks,
-.page-id-1664 .wp-block-post-content,
-.page-id-1664 .entry-content,
-.page-id-1664 main {
-  margin: 0 !important;
-  padding: 0 !important;
-  max-width: 100% !important;
+  margin-block-end: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
 }
 
 /* ── Hide theme header ── */
@@ -164,7 +174,7 @@
       <ul>
         <li><a href="https://ninetysix-studios.com/">Home</a></li>
         <li><a href="https://ninetysix-studios.com/blog-posts/">Blogs</a></li>
-        <li><a href="https://ninetysix-studios.com/langit-lupa-office-wars/">Our Games</a></li>
+        <li><a href="https://ninetysix-studios.com/langit-lupa-office-wars/">Games</a></li>
         <li><a href="https://ninetysix-studios.com/press/">Press</a></li>
         <li><a href="#">About Us</a></li>
       </ul>
@@ -193,7 +203,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 .press-intro {
-  padding: 60px 24px 0;
+  padding: 100px 24px 0;
   text-align: center;
 }
 
@@ -203,6 +213,7 @@
   height: auto;
   border-radius: 16px;
   filter: drop-shadow(0 6px 20px rgba(0,0,0,0.25));
+  margin-top: 60px;
   margin-bottom: 36px;
 }
 
@@ -282,6 +293,52 @@
   filter: drop-shadow(0 8px 22px rgba(0,0,0,0.28));
 }
 
+/* ── Developer / Socials ── */
+.press-footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  gap: 40px;
+}
+.press-footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+.press-footer-col h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #000;
+  margin-bottom: 12px;
+}
+.press-footer-col p,
+.press-footer-col .social-link {
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.8;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+}
+.press-footer-col .social-link {
+  color: #bf9c3b;
+}
+.press-footer-col .social-link:hover {
+  text-decoration: underline;
+  color: #a5832e;
+}
+.press-footer-logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 700px) {
   .press-title {
     font-size: 1.8rem;
@@ -290,9 +347,9 @@
     max-width: 100%;
   }
   .press-footer-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
   }
 }
 
@@ -340,27 +397,9 @@
 
 <!-- ============================================ -->
 
-<!-- BLOCK 3: Custom HTML — Developer / Socials — INLINE STYLES ONLY -->
+<!-- BLOCK 3: Custom HTML — Developer / Socials — CLASSES ONLY -->
 
-<div style="display:flex;justify-content:center;align-items:flex-start;max-width:900px;margin:60px auto 0;padding:0 20px;font-family:Poppins,sans-serif;text-align:center;gap:40px">
-  <div style="flex:1;min-width:200px">
-    <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/press-kit-page-logo.png" alt="NinetySix Studios Logo" style="max-width:200px;width:100%;height:auto;display:block">
-  </div>
-  <div style="flex:1;min-width:200px">
-    <h3 style="font-family:Poppins,sans-serif;font-weight:700;font-size:1.15rem;color:#000;margin-bottom:12px">Developer</h3>
-    <p style="font-size:0.95rem;color:#000;line-height:1.8;margin:0;display:block">NinetySix Studios</p>
-    <p style="font-size:0.95rem;color:#000;line-height:1.8;margin:0;display:block">kendrick@ninetysix-studios.com</p>
-    <p style="font-size:0.95rem;color:#000;line-height:1.8;margin:0;display:block">General Santos City</p>
-    <p style="font-size:0.95rem;color:#000;line-height:1.8;margin:0;display:block">+639175583908</p>
-  </div>
-  <div style="flex:1;min-width:200px">
-    <h3 style="font-family:Poppins,sans-serif;font-weight:700;font-size:1.15rem;color:#000;margin-bottom:12px">Socials</h3>
-    <a href="https://discord.com/invite/havtWcsqbU" target="_blank" style="font-size:0.95rem;color:#bf9c3b;line-height:1.8;text-decoration:none;display:block">Discord</a>
-    <a href="https://www.facebook.com/ninetysixstudios/" target="_blank" style="font-size:0.95rem;color:#bf9c3b;line-height:1.8;text-decoration:none;display:block">Facebook</a>
-    <a href="https://www.tiktok.com/@teamninetysix" target="_blank" style="font-size:0.95rem;color:#bf9c3b;line-height:1.8;text-decoration:none;display:block">TikTok</a>
-    <a href="https://www.youtube.com/@ninetysix-studios" target="_blank" style="font-size:0.95rem;color:#bf9c3b;line-height:1.8;text-decoration:none;display:block">YouTube</a>
-  </div>
-</div>
+<div class="press-footer-row"><div class="press-footer-col"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/press-kit-page-logo.png" alt="NinetySix Studios Logo" class="press-footer-logo"></div><div class="press-footer-col"><h3>Developer</h3><p>NinetySix Studios</p><p>kendrick@ninetysix-studios.com</p><p>General Santos City</p><p>+639175583908</p></div><div class="press-footer-col"><h3>Socials</h3><a href="https://discord.com/invite/havtWcsqbU" target="_blank" class="social-link">Discord</a><a href="https://www.facebook.com/ninetysixstudios/" target="_blank" class="social-link">Facebook</a><a href="https://www.tiktok.com/@teamninetysix" target="_blank" class="social-link">TikTok</a><a href="https://www.youtube.com/@ninetysix-studios" target="_blank" class="social-link">YouTube</a></div></div>
 
 <!-- END BLOCK 3 -->
 

@@ -1,0 +1,421 @@
+<!-- ⏬ PASTE THIS ENTIRE BLOCK INTO A SINGLE CUSTOM HTML BLOCK IN THE BLOG POST ⏬ -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ── Theme Reset ── */
+.post-single-wrapper,
+.post-single-wrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.post-single-wrapper {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ── Hide theme header/footer/wrappers ── */
+html:has(.post-single-wrapper) header.wp-block-template-part,
+html:has(.post-single-wrapper) footer:not(.blog-custom-footer),
+html:has(.post-single-wrapper) #colophon,
+html:has(.post-single-wrapper) [class*="footer"]:not(.blog-custom-footer) {
+  display: none !important;
+}
+html:has(.post-single-wrapper) .wp-site-blocks,
+html:has(.post-single-wrapper) .entry-content,
+html:has(.post-single-wrapper) .wp-block-post-content,
+html:has(.post-single-wrapper) main {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+html:has(.post-single-wrapper) .has-global-padding {
+  padding-top: 0 !important;
+}
+
+/* ── Hide template duplicate title/featured image ── */
+html:has(.post-single-wrapper) .wp-block-post-title,
+html:has(.post-single-wrapper) .wp-block-post-featured-image,
+html:has(.post-single-wrapper) .wp-container-core-group-is-layout-fe911917 {
+  display: none !important;
+}
+
+/* ── Hide template footer ── */
+html:has(.post-single-wrapper) footer.wp-block-template-part {
+  display: none !important;
+}
+
+/* ── Header ── */
+.blog-custom-header {
+  background-color: #1F345C;
+  color: white;
+  padding: 6px 60px;
+  margin: 0 calc(-50vw + 50%);
+}
+.blog-custom-header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog-custom-header .header-left {
+  display: flex;
+  align-items: center;
+}
+.blog-custom-header .logo {
+  height: 80px;
+  width: auto;
+  margin-right: 10px;
+}
+.blog-custom-header .header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+.blog-custom-header .header-nav li {
+  display: flex;
+  align-items: center;
+}
+.blog-custom-header .header-nav li:not(:last-child)::after {
+  content: "|";
+  color: rgba(255,255,255,0.4);
+  margin: 0 40px;
+}
+.blog-custom-header .header-nav a {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-family: 'Special Elite', cursive;
+}
+.blog-custom-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.blog-custom-header .header-right a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.blog-custom-header .header-nav a:hover,
+.blog-custom-header .header-right a:hover {
+  color: #ffcc00;
+}
+.blog-custom-header .social-icon {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.blog-custom-header .header-right a:hover .social-icon {
+  transform: scale(1.25);
+  filter: brightness(1.3);
+}
+
+/* ── Post Content Area ── */
+.post-single-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 24px 60px;
+  text-align: center;
+}
+
+/* ── Title ── */
+.post-single-title {
+  font-family: 'Special Elite', cursive;
+  font-size: 2.2rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 36px;
+  line-height: 1.3;
+}
+
+/* ── Featured Image ── */
+.post-single-featured {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.25));
+  margin-bottom: 48px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Body Text ── */
+.post-single-body {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  color: #000;
+  line-height: 1.8;
+}
+
+.post-single-body p {
+  margin-bottom: 18px;
+}
+
+.post-single-body strong {
+  font-weight: 700;
+}
+
+.post-single-body a {
+  color: #1f345c;
+  text-decoration: underline;
+}
+
+/* ── Q&A / Section Headings ── */
+.post-single-body .qa-heading {
+  display: inline-block;
+  background-color: #1f345c;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 12px 22px;
+  border-radius: 14px;
+  margin: 36px 0 16px;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ── Awards sub-heading ── */
+.post-single-body .award-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+  margin: 20px 0 10px;
+}
+
+/* ── Lists ── */
+.post-single-body ul,
+.post-single-body ol {
+  margin: 0 0 22px 20px;
+  line-height: 1.8;
+}
+
+.post-single-body li {
+  margin-bottom: 6px;
+}
+
+/* ── Separator ── */
+.post-single-body hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 24px 0;
+}
+
+/* ── Footer ── */
+.blog-custom-footer {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog-custom-footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.blog-custom-footer p {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .blog-custom-header {
+    padding: 6px 16px;
+  }
+  .blog-custom-header .header-container {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .blog-custom-header .header-nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .blog-custom-header .header-nav li:not(:last-child)::after {
+    margin: 0 12px;
+  }
+  .post-single-title {
+    font-size: 1.6rem;
+  }
+  .post-single-featured {
+    max-width: 100%;
+  }
+  .blog-custom-footer p {
+    bottom: 8px;
+    font-size: 0.8rem;
+  }
+}
+</style>
+
+<div class="post-single-wrapper">
+
+  <!-- HEADER -->
+  <header class="blog-custom-header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="https://ninetysix-studios.com/">
+          <img src="https://ninetysix-studios.com/wp-content/uploads/2026/05/image_2026-05-29_112335959.png" alt="Company Logo" class="logo">
+        </a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="https://ninetysix-studios.com/">Home</a></li>
+          <li><a href="https://ninetysix-studios.com/blog-posts/">Blogs</a></li>
+          <li><a href="https://ninetysix-studios.com/langit-lupa-office-wars/">Our Games</a></li>
+          <li><a href="https://ninetysix-studios.com/press/">Press</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <a href="https://facebook.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134341040.png" alt="Facebook" class="social-icon"></a>
+        <a href="https://instagram.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134442016.png" alt="Instagram" class="social-icon"></a>
+        <a href="https://twitter.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134504848.png" alt="Twitter" class="social-icon"></a>
+        <a href="https://linkedin.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134654223.png" alt="LinkedIn" class="social-icon"></a>
+        <a href="https://tiktok.com/@yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134724016.png" alt="TikTok" class="social-icon"></a>
+        <a href="https://youtube.com/yourpage"><img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/image_2026-06-02_134819559.png" alt="YouTube" class="social-icon"></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- POST CONTENT                                              -->
+  <!-- ======================================================== -->
+
+  <div class="post-single-content">
+
+    <!-- TITLE -->
+    <h1 class="post-single-title">Everything You've Been Wondering About Langit Lupa: Office Wars</h1>
+
+    <!-- FEATURED IMAGE -->
+    <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/Blog-Post-1.png" alt="Langit Lupa: Office Wars" class="post-single-featured">
+
+    <!-- BODY -->
+    <div class="post-single-body">
+
+      <!-- ── Additional Details ── -->
+      <h2 class="qa-heading">Additional Details</h2>
+      <p>- <strong>Genre</strong>: Online Multiplayer Party Game of Tag</p>
+      <p>- <strong>Game</strong>: Play 9+ Filipino Childhood Games set in Office</p>
+      <p><strong>- Demo Game Modes:</strong> Langit Lupa, 21 (Bente-Uno), Ice-ice Water, Agawan Base, Labo-labo, Capture the Flag, Pass the Bomb, Lipat Bayan, Claygo</p>
+      <p><strong>- Full Release Game Modes:</strong> Langit Lupa, 21 (Bente-Uno), Ice-ice Water, Agawan Base, Labo-labo, Capture the Flag, Pass the Bomb, Lipat Bayan, Claygo, Sungka, Patintero, Tumba Lata, Palosebo, Luksong Baka, Hide and Seek, Chinese Garter, Jumping Rope</p>
+      <p><strong>- Players:</strong> Minimum 4 to 8</p>
+      <p>- <strong>Full Game Release Date</strong>: 2026</p>
+      <p>- <strong>Price</strong>: Less than P200</p>
+      <p>- <strong>My Personal FB</strong>: <a href="http://www.facebook.com/kendrick.villaruel/" target="_blank" rel="noreferrer noopener">www.facebook.com/kendrick.villaruel/</a> (message me anytime)</p>
+      <p>- <strong>Steam Page Link</strong>: <a href="https://store.steampowered.com/app/3863860/Langit_Lupa_Office_Series_Demo/" target="_blank" rel="noreferrer noopener">https://store.steampowered.com/app/3863860/Langit_Lupa_Office_Series_Demo/</a></p>
+      <p>- <strong>Trailer on YouTube Link:</strong> <a href="https://www.youtube.com/watch?v=oGfQotBJLFc" target="_blank" rel="noreferrer noopener">https://www.youtube.com/watch?v=oGfQotBJLFc</a></p>
+      <p><strong>Link to Presskit (with transparent .pngs, screenshots)</strong>: <a href="https://drive.google.com/drive/u/1/folders/1w1QmjjktKMhC7TvPfifcbKsz6gAFyHpE">https://drive.google.com/drive/u/1/folders/1w1QmjjktKMhC7TvPfifcbKsz6gAFyHpE</a></p>
+      <p>More about the game, me, and us: <a href="https://ninetysix-studios.com/press/" target="_blank" rel="noreferrer noopener">https://ninetysix-studios.com/press/</a></p>
+
+      <!-- ── Awards ── -->
+      <h2 class="qa-heading">Awards</h2>
+      <h3 class="award-heading">2024 National Champion DOST Esports Game Dev Challenge</h3>
+      <ul>
+        <li><a href="https://ninetysix-studios.com/2025/01/07/langit-lupa-from-shelf-to-champion/">https://ninetysix-studios.com/2025/01/07/langit-lupa-from-shelf-to-champion/</a></li>
+        <li><a href="https://www.facebook.com/share/p/15fbum4buE">https://www.facebook.com/share/p/15fbum4buE</a></li>
+        <li><a href="https://www.facebook.com/share/p/14HcgzYxMxW">https://www.facebook.com/share/p/14HcgzYxMxW</a></li>
+      </ul>
+      <h3 class="award-heading">2024 Indie Games Group PH Most Anticipated Game</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/share/p/19QCJADqf8/">https://www.facebook.com/share/p/19QCJADqf8/</a></li>
+      </ul>
+
+      <!-- ── Q&A ── -->
+      <h2 class="qa-heading">1. What inspired you to create Langit Lupa: Office Wars, and how did the idea of combining Filipino childhood games with an office setting come about?</h2>
+      <p>We noticed that very few video games showcase Filipino childhood games, and we wanted to change that. <strong>Langit Lupa: Office Wars</strong> was born from our desire to preserve those memories while giving players a fun, modern way to relive them. It's a project close to our hearts, and we believe many Filipinos can relate to the nostalgia it brings.</p>
+      <hr>
+
+      <h2 class="qa-heading">2. Why set it in an office?</h2>
+      <p>Ever since I was younger, I loved the idea of breaking the seriousness of office life with a little chaos and fun. Imagine people working quietly when, all of a sudden, everyone's running around playing childhood games. That's exactly the vibe we wanted—bringing the playfulness of the past into a setting where you'd least expect it.</p>
+      <hr>
+
+      <h2 class="qa-heading">3. How did you decide on the theme of making it a multiplayer party game?</h2>
+      <p>Growing up, Filipino street games were always best enjoyed <strong>with friends</strong>. We wanted to recreate that same social, laugh-filled experience online. The goal was simple: make a game where you can reconnect, tease, and compete with friends—just like we did before video games even existed.</p>
+      <hr>
+
+      <h2 class="qa-heading">4. Filipino players often describe a sense of nostalgia when playing the game. Was evoking childhood memories a big part of your design vision?</h2>
+      <p>Absolutely! That's one of the heartbeats of the game. We've seen players start <strong>roleplaying as kids</strong>—changing their voices, joking around, and even playfully sulking when they lose, just like we all used to back then. It's not just about playing the games; it's about <strong>recreating that childhood energy</strong> in a digital space.</p>
+      <hr>
+
+      <h2 class="qa-heading">5. Could you walk us through how Langit Lupa: Office Wars is played? What classic Filipino games did you adapt, and how did you make them work in an office environment?</h2>
+      <p>When players join, they can create a private <strong>3D lobby</strong> and invite friends. Once there are three or more players, the fun begins!</p>
+      <p>The first mode is <strong>Langit Lupa</strong>—a random tagger is assigned, and their job is to chase and tag others. Here's the twist: <strong>if you're on top of furniture, you're safe!</strong> We turned office desks, chairs, and cabinets into your modern "langit."</p>
+      <p>Beyond Langit Lupa, we've adapted several classic Filipino games, including:</p>
+      <ul>
+        <li><strong>Bente-Uno</strong> <em>(infection mode)</em> – Once tagged, you join the tagger's team until there's only one survivor left.</li>
+        <li><strong>Ice Ice Water</strong> – Freeze and unfreeze your teammates to win.</li>
+        <li><strong>Agawan Base</strong> – Capture and defend your base.</li>
+        <li>Plus more game modes like <strong>Sungka, Tumbang Preso, Labo-labo</strong>, and others designed to keep matches unpredictable and chaotic.</li>
+      </ul>
+      <hr>
+
+      <h2 class="qa-heading">6. What makes the game especially fun when played with friends online?</h2>
+      <p>Two words: <strong>laughter everywhere</strong>. We packed the game with Filipino humor—characters teasing each other, playful taunts, and that competitive-but-friendly energy we all know from childhood. It's one of those games where you're <strong>yelling, laughing, and blaming your friends</strong> the entire time.</p>
+      <hr>
+
+      <h2 class="qa-heading">7. Since Langit Lupa: Office Wars is designed as an online multiplayer party game, what unique challenges and opportunities did you face when building a social, competitive experience?</h2>
+      <p>The biggest challenge? <strong>You can't predict what players will do.</strong> Some players roleplay as office workers, some ignore the objectives and start throwing chairs across the room, and others shove each other into hilarious situations. While this created technical challenges, it also led to some of the <strong>most unexpected and fun emergent gameplay</strong> moments we've seen.</p>
+      <hr>
+
+      <h2 class="qa-heading">8. How important was it for you to showcase Filipino culture through gaming?</h2>
+      <p>Very important. During our school demos, we discovered that many students today <strong>aren't familiar</strong> with some of these games anymore. That really struck us. By putting these games in a digital space, we're helping <strong>preserve a part of Filipino culture</strong>—making sure names like <em>Langit Lupa, Bente-Uno, and Agawan Base</em> don't fade into obscurity.</p>
+      <hr>
+
+      <h2 class="qa-heading">9. How have Filipino players responded so far? Any memorable reactions or feedback from people who grew up playing these games?</h2>
+      <p>The response has been amazing. Some players <strong>teach their friends how the games were played back then</strong>, while others joke around, calling those unfamiliar with the rules "rich kids" for never having played them growing up. Many players also fully commit to the experience by roleplaying as children, which makes the matches even more chaotic and fun.</p>
+      <hr>
+
+      <h2 class="qa-heading">10. What's next for Langit Lupa: Office Wars? Are there plans to add more Filipino childhood games, office-inspired levels, or new multiplayer modes?</h2>
+      <p>Right now, the <strong>free demo</strong> is live and includes <strong>9 game modes</strong>:</p>
+      <ul>
+        <li>5 Filipino-inspired modes → Langit Lupa, Bente-Uno, Ice Ice Water, Agawan Base, and Labo-Labo</li>
+        <li>4 extras → Capture the Flag, Pass the Bomb, Lipat Bayan, and Claygo</li>
+      </ul>
+      <p>For the <strong>full release in 2026</strong>, we're adding even <strong>more Filipino classics</strong> like <strong>Sungka, Patintero, Tumba Lata, Palosebo, Luksong Baka, Hide and Seek, Chinese Garter, and Jump Rope</strong>. We want it to feel like the ultimate playground for Filipino childhood games.</p>
+      <hr>
+
+      <h2 class="qa-heading">11. Have you considered bringing the game to other platforms, like mobile or consoles?</h2>
+      <p>For now, <strong>Langit Lupa: Office Wars</strong> is available on <strong>PC and Mac</strong>, but we're open to expanding. Mobile is definitely on our radar, especially if enough players request it.</p>
+      <hr>
+
+      <h2 class="qa-heading">12. Where can players download Langit Lupa: Office Wars, and is it free to play?</h2>
+      <p>Players can <strong>download the free demo today on Steam</strong>, and it'll <strong>always remain free</strong>. The full game is still in development, with an expected release in <strong>2026</strong>—and it's going to be packed with even more content.</p>
+      <p>Steam Link: <a href="https://store.steampowered.com/app/3863860/Langit_Lupa_Office_Series_Demo">https://store.steampowered.com/app/3863860/Langit_Lupa_Office_Series_Demo</a></p>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="blog-custom-footer">
+    <img src="https://ninetysix-studios.com/wp-content/uploads/2026/06/blogpost-footer.png" alt="Footer">
+    <p>&copy; <span id="blog-year"></span> NinetySix Studios. All rights reserved</p>
+  </footer>
+
+</div>
+
+<script>
+document.getElementById('blog-year').textContent = new Date().getFullYear();
+</script>
+
+<!-- ⏹ END CUSTOM HTML BLOCK ⏹ -->
