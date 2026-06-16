@@ -7,6 +7,9 @@
 /* HEADER STYLING */
 .site-header {
   --side-padding: 60px; /* <-- CHANGE THIS to adjust edge margins */
+  --glow-spread: 15px;  /* <-- CHANGE glow size */
+  --glow-blur: 5px;     /* <-- CHANGE glow softness */
+  --glow-opacity: 0.8;  /* <-- CHANGE glow intensity */
   background-color: #1F345C; /* Dark blue */
   color: white;
   padding: 6px var(--side-padding);
@@ -24,9 +27,17 @@
 }
 
 .logo {
-  height: 80px; /* smaller logo to slim header */
+  --logo-height: 65px;  /* <-- CHANGE to adjust logo size */
+  height: var(--logo-height);
   width: auto;
   margin-right: 10px;
+  transition: filter 0.3s ease;
+}
+
+.logo:hover {
+  filter:
+    drop-shadow(0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)))
+    drop-shadow(0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6)));
 }
 
 .company-name {
@@ -57,11 +68,16 @@
 }
 
 .header-nav a {
-  font-size: 16px;
+  --nav-font-size: 18px;     /* <-- CHANGE to adjust page name size */
+  --nav-glow-spread: 15px;   /* <-- CHANGE glow size */
+  --nav-glow-blur: 5px;      /* <-- CHANGE glow softness */
+  --nav-glow-opacity: 0.8;   /* <-- CHANGE glow intensity */
+  font-size: var(--nav-font-size);
   text-decoration: none;
   color: white;
   font-weight: 500;
   font-family: 'Special Elite', cursive;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .header-right {
@@ -75,22 +91,28 @@
   color: white;
   font-size: 18px;
   text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
-/* Hover effect */
-.header-nav a:hover,
-.header-right a:hover {
-  color: #ffcc00; /* Accent color */
-}
-
-.social-icon {
-  height: 24px;   /* adjust to desired size */
-  width: 24px;    /* keep square ratio */
-  vertical-align: middle;
-  transition: transform 0.2s ease, filter 0.2s ease;
+/* Hover glow effects */
+.header-nav a:hover {
+  text-shadow:
+    0 0 var(--nav-glow-blur) rgba(255,255,255,var(--nav-glow-opacity)),
+    0 0 var(--nav-glow-spread) rgba(255,255,255,calc(var(--nav-glow-opacity) * 0.6));
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .header-right a:hover .social-icon {
   transform: scale(1.25);
-  filter: brightness(1.3);
+  filter:
+    drop-shadow(0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)))
+    drop-shadow(0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6)));
+}
+
+.social-icon {
+  height: 26px;   /* adjust to desired size */
+  width: 26px;    /* keep square ratio */
+  vertical-align: middle;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
