@@ -324,7 +324,7 @@ html, body {
 
 .section-4-title {
   --s4t-top: 2470px;    /* <-- CHANGE to adjust vertical position */
-  --s4t-left: 525px;    /* <-- CHANGE to adjust horizontal position */
+  --s4t-left: 590px;    /* <-- CHANGE to adjust horizontal position */
   --s4t-size: 54px;     /* <-- CHANGE to adjust font size */
   position: absolute;
   top: var(--s4t-top);
