@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Special+Elite&display=swap');
 
-html, body {
-  margin: 0;
-}
-
-.site-header {
-  margin-bottom: 0 !important;
-}
-
 .home-main {
   margin-top: 0 !important;
   position: relative;
@@ -18,10 +10,37 @@ html, body {
   display: block;
 }
 
+.section-1-logo-desc {
+  --s1ld-top: 0px;       /* <-- CHANGE to adjust vertical position */
+  --s1ld-width: 100%;   /* <-- CHANGE to adjust size */
+  position: absolute;
+  top: var(--s1ld-top);
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--s1ld-width);
+  height: auto;
+}
+
+.section1-link {
+  --s1-top: 620px;    /* <-- CHANGE to adjust vertical position */
+  --s1-left: 270px;   /* <-- CHANGE to adjust horizontal position */
+  --s1-width: 200px;  /* <-- CHANGE to adjust size */
+  position: absolute;
+  top: var(--s1-top);
+  left: var(--s1-left);
+  width: var(--s1-width);
+}
+
+.section1-btn {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .langit-lupa-img {
-  --ll-top: 192px;       /* <-- CHANGE to adjust vertical position */
-  --ll-right: 470px;     /* <-- CHANGE to adjust horizontal position */
-  --ll-width: 250px;     /* <-- CHANGE to adjust size (height auto-scales) */
+  --ll-top: 220px;       /* <-- CHANGE to adjust vertical position */
+  --ll-right: 570px;     /* <-- CHANGE to adjust horizontal position */
+  --ll-width: 290px;     /* <-- CHANGE to adjust size (height auto-scales) */
   --glow-spread: 20px;   /* <-- CHANGE glow size */
   --glow-blur: 12px;      /* <-- CHANGE glow softness */
   --glow-opacity: 1;   /* <-- CHANGE glow intensity */
@@ -34,6 +53,17 @@ html, body {
   transition: filter 0.3s ease;
 }
 
+.langit-lupa-bg {
+  --llbg-top: 200px;     /* <-- CHANGE to adjust vertical position */
+  --llbg-right: 480px;   /* <-- CHANGE to adjust horizontal position */
+  --llbg-width: 400px;   /* <-- CHANGE to adjust size */
+  position: absolute;
+  top: var(--llbg-top);
+  right: var(--llbg-right);
+  width: var(--llbg-width);
+  height: auto;
+}
+
 .langit-lupa-img:hover {
   filter:
     drop-shadow(0 0 var(--glow-blur) rgba(3,140,195,var(--glow-opacity)))
@@ -41,9 +71,9 @@ html, body {
 }
 
 .about-us-img {
-  --au-top: 145px;       /* <-- CHANGE to adjust vertical position */
-  --au-right: 120px;     /* <-- CHANGE to adjust horizontal position */
-  --au-width: 255px;     /* <-- CHANGE to adjust size (height auto-scales) */
+  --au-top: 160px;       /* <-- CHANGE to adjust vertical position */
+  --au-right: 60px;     /* <-- CHANGE to adjust horizontal position */
+  --au-width: 210px;     /* <-- CHANGE to adjust size (height auto-scales) */
   --glow-spread: 20px;   /* <-- CHANGE glow size */
   --glow-blur: 12px;      /* <-- CHANGE glow softness */
   --glow-opacity: 1;   /* <-- CHANGE glow intensity */
@@ -62,10 +92,21 @@ html, body {
     drop-shadow(0 0 var(--glow-spread) rgba(158,209,60,calc(var(--glow-opacity) * 0.5)));
 }
 
+.about-us-bg {
+  --aubg-top: 90px;     /* <-- CHANGE to adjust vertical position */
+  --aubg-right: 120px;    /* <-- CHANGE to adjust horizontal position */
+  --aubg-width: 470px;   /* <-- CHANGE to adjust size */
+  position: absolute;
+  top: var(--aubg-top);
+  right: var(--aubg-right);
+  width: var(--aubg-width);
+  height: auto;
+}
+
 .blogs-img {
-  --bl-top: 445px;       /* <-- CHANGE to adjust vertical position */
-  --bl-right: 110px;     /* <-- CHANGE to adjust horizontal position */
-  --bl-width: 320px;     /* <-- CHANGE to adjust size (height auto-scales) */
+  --bl-top: 570px;       /* <-- CHANGE to adjust vertical position */
+  --bl-right: 60px;     /* <-- CHANGE to adjust horizontal position */
+  --bl-width: 200px;     /* <-- CHANGE to adjust size (height auto-scales) */
   --glow-spread: 20px;   /* <-- CHANGE glow size */
   --glow-blur: 12px;      /* <-- CHANGE glow softness */
   --glow-opacity: 1;   /* <-- CHANGE glow intensity */
@@ -84,10 +125,42 @@ html, body {
     drop-shadow(0 0 var(--glow-spread) rgba(158,209,60,calc(var(--glow-opacity) * 0.5)));
 }
 
+.blogs-bg {
+  --blbg-top: 490px;     /* <-- CHANGE to adjust vertical position */
+  --blbg-right: 80px;    /* <-- CHANGE to adjust horizontal position */
+  --blbg-width: 480px;   /* <-- CHANGE to adjust size */
+  position: absolute;
+  top: var(--blbg-top);
+  right: var(--blbg-right);
+  width: var(--blbg-width);
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .about-us-2-img {
-  --sa-top: 750px;       /* <-- CHANGE to adjust vertical position */
-  --sa-right: 640px;
-  --sa-width: 480px;     /* <-- CHANGE to adjust size (height auto-scales) */
+  --sa-top: 1000px;       /* <-- CHANGE to adjust vertical position */
+  --sa-right: 820px;
+  --sa-width: 580px;     /* <-- CHANGE to adjust size (height auto-scales) */
   position: absolute;
   top: var(--sa-top);
   right: var(--sa-right);
@@ -111,123 +184,8 @@ html, body {
   display: block;
 }
 
-.section-3-img1 {
-  --s3-top: 1690px;     /* <-- CHANGE to adjust vertical position */
-  --s3-left: 135px;     /* <-- CHANGE to adjust horizontal position */
-  --s3-height: 170px;   /* <-- CHANGE to adjust height */
-  --s3-width: auto;     /* <-- CHANGE to adjust width */
-  position: absolute;
-  top: var(--s3-top);
-  left: var(--s3-left);
-}
-
-.section-3-img2 {
-  --s3-top: 1690px;     /* <-- CHANGE to adjust vertical position */
-  --s3-left: 610px;     /* <-- CHANGE to adjust horizontal position */
-  --s3-height: 170px;   /* <-- CHANGE to adjust height */
-  --s3-width: auto;     /* <-- CHANGE to adjust width */
-  position: absolute;
-  top: var(--s3-top);
-  left: var(--s3-left);
-}
-
-.section-3-img3 {
-  --s3-top: 1690px;     /* <-- CHANGE to adjust vertical position */
-  --s3-left: 1025px;    /* <-- CHANGE to adjust horizontal position */
-  --s3-height: 170px;   /* <-- CHANGE to adjust height */
-  --s3-width: auto;     /* <-- CHANGE to adjust width */
-  position: absolute;
-  top: var(--s3-top);
-  left: var(--s3-left);
-}
-
-.section-3-img1 img,
-.section-3-img2 img,
-.section-3-img3 img {
-  height: var(--s3-height);
-  width: var(--s3-width);
-  display: block;
-}
-
-.section-3-title1 {
-  --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
-  --s3t-left: 135px;    /* <-- CHANGE to adjust horizontal position */
-  --s3t-width: 300px;    /* <-- CHANGE to adjust width */
-  --s3t-height: auto;   /* <-- CHANGE to adjust height */
-  position: absolute;
-  top: var(--s3t-top);
-  left: var(--s3t-left);
-}
-
-.section-3-title2 {
-  --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
-  --s3t-left: 610px;    /* <-- CHANGE to adjust horizontal position */
-  --s3t-width: 270px;    /* <-- CHANGE to adjust width */
-  --s3t-height: auto;   /* <-- CHANGE to adjust height */
-  position: absolute;
-  top: var(--s3t-top);
-  left: var(--s3t-left);
-}
-
-.section-3-title3 {
-  --s3t-top: 1870px;    /* <-- CHANGE to adjust vertical position */
-  --s3t-left: 1025px;   /* <-- CHANGE to adjust horizontal position */
-  --s3t-width: 270px;    /* <-- CHANGE to adjust width */
-  --s3t-height: auto;   /* <-- CHANGE to adjust height */
-  position: absolute;
-  top: var(--s3t-top);
-  left: var(--s3t-left);
-}
-
-.section-3-title1 img,
-.section-3-title2 img,
-.section-3-title3 img {
-  width: var(--s3t-width);
-  height: var(--s3t-height);
-  display: block;
-}
-
-.section-3-date1 {
-  --s3d-top: 1970px;    /* <-- CHANGE to adjust vertical position */
-  --s3d-left: 140px;    /* <-- CHANGE to adjust horizontal position */
-  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
-  position: absolute;
-  top: var(--s3d-top);
-  left: var(--s3d-left);
-  font-family: 'Poppins', sans-serif;
-  font-size: var(--s3d-size);
-  color: #000;
-  margin: 0;
-}
-
-.section-3-date2 {
-  --s3d-top: 1940px;    /* <-- CHANGE to adjust vertical position */
-  --s3d-left: 615px;    /* <-- CHANGE to adjust horizontal position */
-  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
-  position: absolute;
-  top: var(--s3d-top);
-  left: var(--s3d-left);
-  font-family: 'Poppins', sans-serif;
-  font-size: var(--s3d-size);
-  color: #000;
-  margin: 0;
-}
-
-.section-3-date3 {
-  --s3d-top: 1940px;    /* <-- CHANGE to adjust vertical position */
-  --s3d-left: 1030px;   /* <-- CHANGE to adjust horizontal position */
-  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
-  position: absolute;
-  top: var(--s3d-top);
-  left: var(--s3d-left);
-  font-family: 'Poppins', sans-serif;
-  font-size: var(--s3d-size);
-  color: #000;
-  margin: 0;
-}
-
 .meet-team-title {
-  --mt-top: 795px;       /* <-- CHANGE to adjust vertical position */
+  --mt-top: 1150px;       /* <-- CHANGE to adjust vertical position */
   --mt-right: 270px;     /* <-- CHANGE to adjust horizontal position */
   --mt-size: 38px;       /* <-- CHANGE to adjust font size */
   position: absolute;
@@ -242,8 +200,8 @@ html, body {
 }
 
 .meet-team-txt1 {
-  --mtx-top: 870px;       /* <-- CHANGE to adjust vertical position */
-  --mtx-left: 850px;      /* <-- CHANGE to adjust horizontal position */
+  --mtx-top: 1170px;       /* <-- CHANGE to adjust vertical position */
+  --mtx-left: 1050px;      /* <-- CHANGE to adjust horizontal position */
   --mtx-width: 440px;     /* <-- CHANGE to adjust text box width */
   --mtx-height: auto;     /* <-- CHANGE to adjust text box height */
   --mtx-size: 20px;       /* <-- CHANGE to adjust font size */
@@ -261,8 +219,8 @@ html, body {
 }
 
 .meet-team-txt2 {
-  --mtx2-top: 1260px;     /* <-- CHANGE to adjust vertical position */
-  --mtx2-left: 240px;     /* <-- CHANGE to adjust horizontal position */
+  --mtx2-top: 1560px;     /* <-- CHANGE to adjust vertical position */
+  --mtx2-left: 440px;     /* <-- CHANGE to adjust horizontal position */
   --mtx2-width: 1020px;    /* <-- CHANGE to adjust text box width */
   --mtx2-height: auto;    /* <-- CHANGE to adjust text box height */
   --mtx2-size: 20px;      /* <-- CHANGE to adjust font size */
@@ -285,25 +243,148 @@ html, body {
   text-decoration: none;
 }
 
-.section1-link {
-  --s1-top: 460px;    /* <-- CHANGE to adjust vertical position */
-  --s1-left: 200px;   /* <-- CHANGE to adjust horizontal position */
-  --s1-width: 200px;  /* <-- CHANGE to adjust size */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-3-img1 {
+  --s3-top: 1990px;     /* <-- CHANGE to adjust vertical position */
+  --s3-left: 335px;     /* <-- CHANGE to adjust horizontal position */
+  --s3-height: 170px;   /* <-- CHANGE to adjust height */
+  --s3-width: auto;     /* <-- CHANGE to adjust width */
   position: absolute;
-  top: var(--s1-top);
-  left: var(--s1-left);
-  width: var(--s1-width);
+  top: var(--s3-top);
+  left: var(--s3-left);
 }
 
-.section1-btn {
-  width: 100%;
-  height: auto;
+.section-3-img2 {
+  --s3-top: 1990px;     /* <-- CHANGE to adjust vertical position */
+  --s3-left: 810px;     /* <-- CHANGE to adjust horizontal position */
+  --s3-height: 170px;   /* <-- CHANGE to adjust height */
+  --s3-width: auto;     /* <-- CHANGE to adjust width */
+  position: absolute;
+  top: var(--s3-top);
+  left: var(--s3-left);
+}
+
+.section-3-img3 {
+  --s3-top: 1990px;     /* <-- CHANGE to adjust vertical position */
+  --s3-left: 1225px;    /* <-- CHANGE to adjust horizontal position */
+  --s3-height: 170px;   /* <-- CHANGE to adjust height */
+  --s3-width: auto;     /* <-- CHANGE to adjust width */
+  position: absolute;
+  top: var(--s3-top);
+  left: var(--s3-left);
+}
+
+.section-3-img1 img,
+.section-3-img2 img,
+.section-3-img3 img {
+  height: var(--s3-height);
+  width: var(--s3-width);
   display: block;
 }
 
+.section-3-title1 {
+  --s3t-top: 2170px;    /* <-- CHANGE to adjust vertical position */
+  --s3t-left: 335px;    /* <-- CHANGE to adjust horizontal position */
+  --s3t-width: 300px;    /* <-- CHANGE to adjust width */
+  --s3t-height: auto;   /* <-- CHANGE to adjust height */
+  position: absolute;
+  top: var(--s3t-top);
+  left: var(--s3t-left);
+}
+
+.section-3-title2 {
+  --s3t-top: 2170px;    /* <-- CHANGE to adjust vertical position */
+  --s3t-left: 810px;    /* <-- CHANGE to adjust horizontal position */
+  --s3t-width: 270px;    /* <-- CHANGE to adjust width */
+  --s3t-height: auto;   /* <-- CHANGE to adjust height */
+  position: absolute;
+  top: var(--s3t-top);
+  left: var(--s3t-left);
+}
+
+.section-3-title3 {
+  --s3t-top: 2170px;    /* <-- CHANGE to adjust vertical position */
+  --s3t-left: 1225px;   /* <-- CHANGE to adjust horizontal position */
+  --s3t-width: 270px;    /* <-- CHANGE to adjust width */
+  --s3t-height: auto;   /* <-- CHANGE to adjust height */
+  position: absolute;
+  top: var(--s3t-top);
+  left: var(--s3t-left);
+}
+
+.section-3-title1 img,
+.section-3-title2 img,
+.section-3-title3 img {
+  width: var(--s3t-width);
+  height: var(--s3t-height);
+  display: block;
+}
+
+.section-3-date1 {
+  --s3d-top: 2270px;    /* <-- CHANGE to adjust vertical position */
+  --s3d-left: 340px;    /* <-- CHANGE to adjust horizontal position */
+  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--s3d-top);
+  left: var(--s3d-left);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--s3d-size);
+  color: #000;
+  margin: 0;
+}
+
+.section-3-date2 {
+  --s3d-top: 2240px;    /* <-- CHANGE to adjust vertical position */
+  --s3d-left: 815px;    /* <-- CHANGE to adjust horizontal position */
+  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--s3d-top);
+  left: var(--s3d-left);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--s3d-size);
+  color: #000;
+  margin: 0;
+}
+
+.section-3-date3 {
+  --s3d-top: 2240px;    /* <-- CHANGE to adjust vertical position */
+  --s3d-left: 1230px;   /* <-- CHANGE to adjust horizontal position */
+  --s3d-size: 14px;     /* <-- CHANGE to adjust font size */
+  position: absolute;
+  top: var(--s3d-top);
+  left: var(--s3d-left);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--s3d-size);
+  color: #000;
+  margin: 0;
+}
+
 .section-3-btn {
-  --s3b-top: 2020px;    /* <-- CHANGE to adjust vertical position */
-  --s3b-left: 1150px;   /* <-- CHANGE to adjust horizontal position */
+  --s3b-top: 2320px;    /* <-- CHANGE to adjust vertical position */
+  --s3b-left: 1350px;   /* <-- CHANGE to adjust horizontal position */
   --s3b-width: 170px;    /* <-- CHANGE to adjust width */
   position: absolute;
   top: var(--s3b-top);
