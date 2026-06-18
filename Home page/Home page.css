@@ -25,8 +25,8 @@
 
 .section1-link {
   position: absolute;
-  top: calc(620 * var(--scale));
-  left: calc(270 * var(--scale));
+  top: calc(660 * var(--scale));
+  left: calc(280 * var(--scale));
   width: calc(200 * var(--scale));
 }
 
@@ -147,8 +147,8 @@
 
 .section-2-link {
   position: absolute;
-  top: calc(1140 * var(--scale));
-  left: calc(470 * var(--scale));
+  top: calc(1430 * var(--scale));
+  left: calc(620 * var(--scale));
   width: calc(160 * var(--scale));
 }
 
@@ -160,8 +160,8 @@
 
 .meet-team-title {
   position: absolute;
-  top: calc(1150 * var(--scale));
-  right: calc(270 * var(--scale));
+  top: calc(980 * var(--scale));
+  right: calc(460 * var(--scale));
   font-family: 'Special Elite', cursive;
   font-size: calc(38 * var(--scale));
   font-weight: 400;
@@ -172,12 +172,12 @@
 
 .meet-team-txt1 {
   position: absolute;
-  top: calc(1170 * var(--scale));
-  left: calc(1050 * var(--scale));
+  top: calc(1050 * var(--scale));
+  left: calc(1080 * var(--scale));
   width: calc(440 * var(--scale));
   height: auto;
   font-family: 'Poppins', sans-serif;
-  font-size: calc(20 * var(--scale));
+  font-size: calc(24 * var(--scale));
   color: #000;
   text-align: center;
   line-height: 1.6;
@@ -186,12 +186,12 @@
 
 .meet-team-txt2 {
   position: absolute;
-  top: calc(1560 * var(--scale));
-  left: calc(440 * var(--scale));
-  width: calc(1020 * var(--scale));
+  top: calc(1550 * var(--scale));
+  left: calc(320 * var(--scale));
+  width: calc(1230 * var(--scale));
   height: auto;
   font-family: 'Poppins', sans-serif;
-  font-size: calc(20 * var(--scale));
+  font-size: calc(24 * var(--scale));
   color: #000;
   text-align: center;
   line-height: 1.6;
@@ -204,35 +204,14 @@
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.section-3-bg {
+  position: absolute;
+  top: calc(1900 * var(--scale));
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+}
 
 .section-3-img1 {
   position: absolute;
