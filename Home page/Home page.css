@@ -12,6 +12,10 @@
   display: block;
 }
 
+
+
+/* SECTION 1 */
+
 .section-1-logo-desc {
   --s1ld-top: 0px;
   --s1ld-width: 100%;
@@ -135,6 +139,7 @@
 
 
 
+/* SECTION 2 */
 
 .about-us-2-img {
   position: absolute;
@@ -203,6 +208,37 @@
   color: #1F345C;
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION 3 */
 
 .section-3-bg {
   position: absolute;
@@ -349,7 +385,16 @@
 
 
 
+/* SECTION 4 */
 
+.section-4-bg {
+  position: absolute;
+  top: calc(2780 * var(--scale));
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+}
 
 .section-4-img {
   position: absolute;
