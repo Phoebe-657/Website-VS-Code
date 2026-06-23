@@ -26,14 +26,15 @@ main {
 
 /* HEADER STYLING */
 .site-header {
-  --side-padding: 60px;  /* <-- CHANGE THIS to adjust edge margins */
-  --header-height: 6px;  /* <-- CHANGE THIS to adjust header height */
-  --glow-spread: 15px;   /* <-- CHANGE glow size */
-  --glow-blur: 5px;      /* <-- CHANGE glow softness */
-  --glow-opacity: 0.8;   /* <-- CHANGE glow intensity */
-  background-color: #1F345C; /* Dark blue */
+  --scale: calc(100vw / 1920);
+  --side-padding: 60;
+  --header-height: 6;
+  --glow-spread: 15;
+  --glow-blur: 5;
+  --glow-opacity: 0.8;
+  background-color: #1F345C;
   color: white;
-  padding: var(--header-height) var(--side-padding);
+  padding: calc(var(--header-height) * var(--scale)) calc(var(--side-padding) * var(--scale));
 }
 
 .header-container {
@@ -48,28 +49,28 @@ main {
 }
 
 .logo {
-  --logo-height: 65px;  /* <-- CHANGE to adjust logo size */
-  height: var(--logo-height);
+  --logo-height: 65;
+  height: calc(var(--logo-height) * var(--scale));
   width: auto;
-  margin-right: 10px;
+  margin-right: calc(10 * var(--scale));
   transition: filter 0.3s ease;
 }
 
 .logo:hover {
   filter:
-    drop-shadow(0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)))
-    drop-shadow(0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6)));
+    drop-shadow(0 0 calc(var(--glow-blur) * var(--scale)) rgba(255,255,255,var(--glow-opacity)))
+    drop-shadow(0 0 calc(var(--glow-spread) * var(--scale)) rgba(255,255,255,calc(var(--glow-opacity) * 0.6)));
 }
 
 .company-name {
-  font-size: 20px;
+  font-size: calc(20 * var(--scale));
   font-weight: bold;
   color: white;
   font-family: 'Special Elite', cursive;
 }
 
 .header-nav ul {
-  --nav-gap: 80px; /* <-- CHANGE THIS to adjust spacing between page names */
+  --nav-gap: 80;
   list-style: none;
   display: flex;
   gap: 0;
@@ -85,15 +86,15 @@ main {
 .header-nav li:not(:last-child)::after {
   content: "|";
   color: rgba(255,255,255,0.4);
-  margin: 0 calc(var(--nav-gap) / 2);
+  margin: 0 calc(var(--nav-gap) / 2 * var(--scale));
 }
 
 .header-nav a {
-  --nav-font-size: 18px;     /* <-- CHANGE to adjust page name size */
-  --nav-glow-spread: 15px;   /* <-- CHANGE glow size */
-  --nav-glow-blur: 5px;      /* <-- CHANGE glow softness */
-  --nav-glow-opacity: 0.8;   /* <-- CHANGE glow intensity */
-  font-size: var(--nav-font-size);
+  --nav-font-size: 18;
+  --nav-glow-spread: 15;
+  --nav-glow-blur: 5;
+  --nav-glow-opacity: 0.8;
+  font-size: calc(var(--nav-font-size) * var(--scale));
   text-decoration: none;
   color: white;
   font-weight: 500;
@@ -102,15 +103,15 @@ main {
 }
 
 .header-right {
-  --icon-gap: 4px; /* <-- CHANGE THIS to adjust icon spacing */
+  --icon-gap: 4;
   display: flex;
   align-items: center;
-  gap: var(--icon-gap);
+  gap: calc(var(--icon-gap) * var(--scale));
 }
 
 .header-right a {
   color: white;
-  font-size: 18px;
+  font-size: calc(18 * var(--scale));
   text-decoration: none;
   transition: transform 0.2s ease;
 }
@@ -118,22 +119,27 @@ main {
 /* Hover glow effects */
 .header-nav a:hover {
   text-shadow:
-    0 0 var(--nav-glow-blur) rgba(255,255,255,var(--nav-glow-opacity)),
-    0 0 var(--nav-glow-spread) rgba(255,255,255,calc(var(--nav-glow-opacity) * 0.6));
+    0 0 calc(var(--nav-glow-blur) * var(--scale)) rgba(255,255,255,var(--nav-glow-opacity)),
+    0 0 calc(var(--nav-glow-spread) * var(--scale)) rgba(255,255,255,calc(var(--nav-glow-opacity) * 0.6));
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: calc(4 * var(--scale));
 }
 
 .header-right a:hover .social-icon {
   transform: scale(1.25);
   filter:
-    drop-shadow(0 0 var(--glow-blur) rgba(255,255,255,var(--glow-opacity)))
-    drop-shadow(0 0 var(--glow-spread) rgba(255,255,255,calc(var(--glow-opacity) * 0.6)));
+    drop-shadow(0 0 calc(var(--glow-blur) * var(--scale)) rgba(255,255,255,var(--glow-opacity)))
+    drop-shadow(0 0 calc(var(--glow-spread) * var(--scale)) rgba(255,255,255,calc(var(--glow-opacity) * 0.6)));
 }
 
 .social-icon {
-  height: 26px;
-  width: 26px;
+  height: calc(26 * var(--scale));
+  width: calc(26 * var(--scale));
   vertical-align: middle;
   transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.header-nav a.active {
+  text-decoration: underline;
+  text-underline-offset: calc(4 * var(--scale));
 }

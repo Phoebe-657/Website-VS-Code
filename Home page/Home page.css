@@ -4,7 +4,7 @@
   --scale: calc(100vw / 1920);
   margin-top: 0 !important;
   position: relative;
-  min-height: calc(3500 * var(--scale));
+  min-height: calc(3100 * var(--scale));
 }
 
 .home-bg {
@@ -260,7 +260,7 @@
 .section-3-img2 {
   position: absolute;
   top: calc(2190 * var(--scale));
-  left: calc(810 * var(--scale));
+  left: calc(785 * var(--scale));
   height: calc(210 * var(--scale));
   width: auto;
 }
@@ -268,7 +268,7 @@
 .section-3-img3 {
   position: absolute;
   top: calc(2190 * var(--scale));
-  left: calc(1225 * var(--scale));
+  left: calc(1310 * var(--scale));
   height: calc(210 * var(--scale));
   width: auto;
 }
@@ -283,24 +283,24 @@
 
 .section-3-title1 {
   position: absolute;
-  top: calc(2170 * var(--scale));
-  left: calc(335 * var(--scale));
+  top: calc(2415 * var(--scale));
+  left: calc(180 * var(--scale));
   width: calc(300 * var(--scale));
   height: auto;
 }
 
 .section-3-title2 {
   position: absolute;
-  top: calc(2170 * var(--scale));
-  left: calc(810 * var(--scale));
+  top: calc(2420 * var(--scale));
+  left: calc(790 * var(--scale));
   width: calc(270 * var(--scale));
   height: auto;
 }
 
 .section-3-title3 {
   position: absolute;
-  top: calc(2170 * var(--scale));
-  left: calc(1225 * var(--scale));
+  top: calc(2420 * var(--scale));
+  left: calc(1310 * var(--scale));
   width: calc(270 * var(--scale));
   height: auto;
 }
@@ -315,8 +315,8 @@
 
 .section-3-date1 {
   position: absolute;
-  top: calc(2270 * var(--scale));
-  left: calc(340 * var(--scale));
+  top: calc(2525 * var(--scale));
+  left: calc(185 * var(--scale));
   font-family: 'Poppins', sans-serif;
   font-size: calc(14 * var(--scale));
   color: #000;
@@ -325,8 +325,8 @@
 
 .section-3-date2 {
   position: absolute;
-  top: calc(2240 * var(--scale));
-  left: calc(815 * var(--scale));
+  top: calc(2500 * var(--scale));
+  left: calc(795 * var(--scale));
   font-family: 'Poppins', sans-serif;
   font-size: calc(14 * var(--scale));
   color: #000;
@@ -335,8 +335,8 @@
 
 .section-3-date3 {
   position: absolute;
-  top: calc(2240 * var(--scale));
-  left: calc(1230 * var(--scale));
+  top: calc(2500 * var(--scale));
+  left: calc(1315 * var(--scale));
   font-family: 'Poppins', sans-serif;
   font-size: calc(14 * var(--scale));
   color: #000;
@@ -345,8 +345,8 @@
 
 .section-3-btn {
   position: absolute;
-  top: calc(2320 * var(--scale));
-  left: calc(1350 * var(--scale));
+  top: calc(2640 * var(--scale));
+  left: calc(1500 * var(--scale));
   width: calc(170 * var(--scale));
 }
 
@@ -418,7 +418,7 @@
 .section-4-txt {
   position: absolute;
   top: calc(2560 * var(--scale));
-  left: calc(830 * var(--scale));
+  left: calc(950 * var(--scale));
   width: calc(440 * var(--scale));
   font-family: 'Poppins', sans-serif;
   font-size: calc(23 * var(--scale));
@@ -430,9 +430,9 @@
 
 .section-4-btn {
   position: absolute;
-  top: calc(2990 * var(--scale));
-  left: calc(970 * var(--scale));
-  width: calc(160 * var(--scale));
+  top: calc(3880 * var(--scale));
+  left: calc(1200 * var(--scale));
+  width: calc(180 * var(--scale));
 }
 
 .section-4-btn img {
@@ -441,13 +441,8 @@
   display: block;
 }
 
-.home-page-footer {
-  position: absolute;
-  top: calc(3380 * var(--scale));
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Poppins', sans-serif;
-  font-size: calc(16 * var(--scale));
-  color: #000;
-  margin: 0;
+.section-4-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
 }

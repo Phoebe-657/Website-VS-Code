@@ -1,0 +1,16 @@
+.site-footer {
+  --cr-top: 3200;
+  position: absolute;
+  top: calc(var(--cr-top) * var(--scale));
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.site-footer p {
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(14 * var(--scale));
+  color: #000;
+  margin: 0;
+  white-space: nowrap;
+}

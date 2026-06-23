@@ -45,5 +45,20 @@
       </div>
     </div>
   </header>
+  <script>
+    (function() {
+      var current = window.location.href;
+      var links = document.querySelectorAll('.header-nav a');
+      links.forEach(function(link) {
+        if (current.indexOf(link.getAttribute('href')) !== -1) {
+          link.classList.add('active');
+        }
+      });
+      // Home page fallback: if no match and URL ends with just the domain or '/'
+      if (!document.querySelector('.header-nav a.active') && (current.match(/ninetysix-studios\.com\/?$/))) {
+        links[0].classList.add('active');
+      }
+    })();
+  </script>
 </body>
 </html>
